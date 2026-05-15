@@ -64,10 +64,12 @@ CMAKE_BINARY_DIR = "/Users/drewdefilippihill/Documents/Northeastern Masters/summ
 
 # The main recursive "all" target.
 all: CMakeFiles/imgDisplay.dir/all
+all: CMakeFiles/vidDisplay.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/imgDisplay.dir/codegen
+codegen: CMakeFiles/vidDisplay.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -76,6 +78,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/imgDisplay.dir/clean
+clean: CMakeFiles/vidDisplay.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -109,6 +112,38 @@ CMakeFiles/imgDisplay.dir/codegen:
 CMakeFiles/imgDisplay.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgDisplay.dir/build.make CMakeFiles/imgDisplay.dir/clean
 .PHONY : CMakeFiles/imgDisplay.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/vidDisplay.dir
+
+# All Build rule for target.
+CMakeFiles/vidDisplay.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/drewdefilippihill/Documents/Northeastern Masters/summer26/cs5330-computer-vision/CS5330-ComputerVision/project1-video-special-effects/build/CMakeFiles" --progress-num=3,4 "Built target vidDisplay"
+.PHONY : CMakeFiles/vidDisplay.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/vidDisplay.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/drewdefilippihill/Documents/Northeastern Masters/summer26/cs5330-computer-vision/CS5330-ComputerVision/project1-video-special-effects/build/CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/vidDisplay.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/drewdefilippihill/Documents/Northeastern Masters/summer26/cs5330-computer-vision/CS5330-ComputerVision/project1-video-special-effects/build/CMakeFiles" 0
+.PHONY : CMakeFiles/vidDisplay.dir/rule
+
+# Convenience name for target.
+vidDisplay: CMakeFiles/vidDisplay.dir/rule
+.PHONY : vidDisplay
+
+# codegen rule for target.
+CMakeFiles/vidDisplay.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/drewdefilippihill/Documents/Northeastern Masters/summer26/cs5330-computer-vision/CS5330-ComputerVision/project1-video-special-effects/build/CMakeFiles" --progress-num=3,4 "Finished codegen for target vidDisplay"
+.PHONY : CMakeFiles/vidDisplay.dir/codegen
+
+# clean rule for target.
+CMakeFiles/vidDisplay.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/clean
+.PHONY : CMakeFiles/vidDisplay.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -129,6 +129,19 @@ imgDisplay/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgDisplay.dir/build.make CMakeFiles/imgDisplay.dir/build
 .PHONY : imgDisplay/fast
 
+#=============================================================================
+# Target rules for targets named vidDisplay
+
+# Build rule for target.
+vidDisplay: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vidDisplay
+.PHONY : vidDisplay
+
+# fast build rule for target.
+vidDisplay/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/build
+.PHONY : vidDisplay/fast
+
 imgDisplay.o: imgDisplay.cpp.o
 .PHONY : imgDisplay.o
 
@@ -153,6 +166,30 @@ imgDisplay.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgDisplay.dir/build.make CMakeFiles/imgDisplay.dir/imgDisplay.cpp.s
 .PHONY : imgDisplay.cpp.s
 
+vidDisplay.o: vidDisplay.cpp.o
+.PHONY : vidDisplay.o
+
+# target to build an object file
+vidDisplay.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/vidDisplay.cpp.o
+.PHONY : vidDisplay.cpp.o
+
+vidDisplay.i: vidDisplay.cpp.i
+.PHONY : vidDisplay.i
+
+# target to preprocess a source file
+vidDisplay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/vidDisplay.cpp.i
+.PHONY : vidDisplay.cpp.i
+
+vidDisplay.s: vidDisplay.cpp.s
+.PHONY : vidDisplay.s
+
+# target to generate assembly for a file
+vidDisplay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vidDisplay.dir/build.make CMakeFiles/vidDisplay.dir/vidDisplay.cpp.s
+.PHONY : vidDisplay.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +199,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... imgDisplay"
+	@echo "... vidDisplay"
 	@echo "... imgDisplay.o"
 	@echo "... imgDisplay.i"
 	@echo "... imgDisplay.s"
+	@echo "... vidDisplay.o"
+	@echo "... vidDisplay.i"
+	@echo "... vidDisplay.s"
 .PHONY : help
 
 

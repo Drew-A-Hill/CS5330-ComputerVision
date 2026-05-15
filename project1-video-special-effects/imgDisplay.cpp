@@ -2,6 +2,7 @@
   Drew Hill
   Summer 2026 
   CS5330 Project 1
+
   imgDisplay.cpp
 
   Loads and displays image from file path.
