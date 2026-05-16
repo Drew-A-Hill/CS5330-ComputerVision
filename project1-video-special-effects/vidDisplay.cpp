@@ -5,7 +5,7 @@
 
   vidDisplay.cpp
 
-  Displays live video from a camera.
+  Displays live video from a camera and performs actions using the live camera feed.
 */
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
