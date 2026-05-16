@@ -25,7 +25,7 @@ Size getSize(VideoCapture *cap) {
 
 /*
 */
-int saveVid(VideoCapture *cap, std::string filename) {
+int saveVid(VideoCapture *cap, std::string filename, std::string windowName) {
     int codec = VideoWriter::fourcc('M', 'J', 'P', 'G');
     std::string filepath = filename + ".avi";
 
@@ -47,62 +47,20 @@ int saveVid(VideoCapture *cap, std::string filename) {
         if ( frame.empty() ) {
             break;
         }
+        setWindowTitle(windowName, "Recording");
+        imshow(windowName, frame);
         output << frame;
 
         char key = waitKey(10);
         if (key == 'q') {
+            setWindowTitle(windowName, windowName);
             break;
         }
     }
     return 0;
 }
 
-// /*
-//   Handles keystrokes.
-
-//   char key the key stroke used to envoke action.
-// */
-// bool keyStrokeHandler(char key, VideoCapture *cap) {
-//         if ( key == 'q' ) {
-//             return true;
-//         } else {
-//             return false;
-//         }
-// }
-
-// /*
-//   Displays the live video from local camera.
-
-//   VideoCapture *cap a pointer to the VideoCapture object 
-// */
-// int displayVideo(VideoCapture *cap) {
-//     Mat frame;
-//     std::string windowName = "Video";
-    
-//     namedWindow(windowName, 1);
-
-//     for(;;) {
-//         windowName = "Video1";
-//         *cap >> frame;
-
-//         if ( frame.empty() ) {
-//             printf("Frame is empty");
-//             break;
-//         }
-
-//         imshow(windowName, frame);
-
-//         char key = waitKey(10);
-//         if ( key == 'q' ) {
-//             break;
-//         } 
-//     }
-//     return 0;
-// }
-
-/*
-
-  
+/* 
 */
 int main(int argc, char *argv[]) {
     VideoCapture *cap;
@@ -140,7 +98,8 @@ int main(int argc, char *argv[]) {
             break;
 
         } else if (key == 's') {
-            saveVid(cap, "./Test2");
+            saveVid(cap, "../Test5", windowName);
+
         }
     }
 
